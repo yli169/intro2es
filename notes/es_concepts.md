@@ -3,7 +3,6 @@
 [上一篇：ELK的安装和配置](/notes/install_es.md)
 
 ## 逻辑层面
-***
 
 ### 文档 Documents
 Elasticsearch是`document-oriented`，数据的最小单位就是`文档document`, 一般用`JSON`biaoshi 。文档有如下重要的属性：
@@ -38,7 +37,6 @@ Elasticsearch是`document-oriented`，数据的最小单位就是`文档document
 接下来我们来看在物理层面上，节点和分片是如何工作的。
 
 ## 物理层面
-***
 
 物理层面的两个主要概念是`节点(Node)`和`分片(Shard)`，简单来说：
 - `Node`就是一个Elasticsearch进程；

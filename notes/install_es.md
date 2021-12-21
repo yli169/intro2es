@@ -3,7 +3,7 @@
 [上一篇：Elasticsearch简介](/notes/es_basics.md)
 
 ## 安装Elasticsearch
-***
+
 1. 进入Elasticsearch[官方下载页面](https://www.elastic.co/cn/downloads/elasticsearch)，选择适合你系统的版本下载。这里我们以ARM构架的MacOS为例（MacBook Air M1 2020）。
 2. 将文件解压缩到指定地址，此处个人习惯地址为`/usr/local/`：
    ```sh
@@ -194,7 +194,7 @@ IK分词插件的安装方法可以在其 [Github Repo](https://github.com/medcl
 ![es-head](/figures/es-head.png)
 
 ## 安装Kibana
-***
+
 1. 进入Kibana[官方下载页面](https://www.elastic.co/cn/downloads/kibana)，选择适合你系统的版本下载。这里我们以ARM构架的MacOS为例（MacBook Air M1 2020）。
 2. 将文件解压缩到指定地址，此处个人习惯地址为`/usr/local/`：
    ```sh

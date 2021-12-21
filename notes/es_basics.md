@@ -1,12 +1,10 @@
 # Elasticsearch简介
 
 ## 什么是ElasticSearch?
-***
 
 `Elasticsearch`是一个底层基于 [Apache Lucene<sup>TM</sup>](https://lucene.apache.org/core/)，提供 [RESTful API](https://restfulapi.net/) 的实时的分布式检索和分析引擎。它同是也是一个分布式文档数据库，其中每个字段均可被索引，且每个字段的数据皆可被搜索。ES具有高扩展性，能够横向扩展至数以百计的服务器储存，并在极短的时间内储存，搜索和分析PB级数据，并且可以应对高并发场景。
 
 ## 为什么要使用ElasticSearch?
-***
 
 相比起传统的关系型数据库如MySQL，Elasticsearch更适用于`海量数据`以及`全文搜索`的场景：
 - MySQL将`索引(Index)`储存在`磁盘(Disk)`中，当数据量大到一定程度时，每次的IO会导致性能衰减。而ES直接建立index放入`内存(RAM)'中，效率大大提高；
@@ -17,7 +15,6 @@
 > ![index example](/figures/index_record.png)
 
 ## 使用ELK Stack进行开发
-***
 
 我们在开发过程中主要会用到`ELK Stack`中的项目。
 
