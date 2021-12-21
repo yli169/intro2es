@@ -1,6 +1,6 @@
 # ElasticSearch核心概念
 
-[上一篇：ELK的安装和配置](/notes/install_es.md)
+[上一篇：安装和配置](/notes/install_es.md)
 
 ## 逻辑层面
 
@@ -40,7 +40,7 @@ Elasticsearch是`document-oriented`，数据的最小单位就是`文档document
 
 物理层面的两个主要概念是`节点(Node)`和`分片(Shard)`，简单来说：
 - `Node`就是一个Elasticsearch进程；
-- `Shard`就是一个Lucene索引，即一个包含倒排索引的文件目录；
+- `Shard`就是一个Lucene索引，即一个包含`倒排索引`（[Appendix A](/notes/appendix_a.md)）的文件目录；
 
 ![physical](/figures/nodes-shards.png)
 
