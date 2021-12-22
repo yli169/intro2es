@@ -31,6 +31,8 @@ Elasticsearch是`document-oriented`，数据的最小单位就是`文档document
 
 我们说document是`schema-free`的，因为一个document并不需要包含mapping里定义的所有fields，同时可以加入新的fields。当新的field加入而Elasticsearch不确定其类型时，它会猜测可能的类型。然而猜测不一定是准确的，所以最安全的方式就是提前定义好所需要的mapping。
 
+`ES 7.0`及之后的版本取消了types的概念，每一个index只对应一个mapping type。
+
 ### 索引 Indices
 `indices`是`mapping types`的容器。一个ES `index`就是一个独立的文档集合，类似于关系型数据库中的`database`。Index储存了mapping types中的所有fields以及其他设置。它们被存储在了各个`分片shards`上。
 
@@ -80,4 +82,4 @@ Elasticsearch是`document-oriented`，数据的最小单位就是`文档document
 
 设置分片时要做好容量规划：分片数量设置过小，可能导致单个分片数据量太大，进而导致数据重新分配耗时过大。另外可用性也会降低；反之如果分片数量设置过大，会影响相关性打分进而影响统计结果。另外单个节点过多分片影响性能，浪费资源。
 
-[下一篇：REST API操作](/notes/rest_api.md)
+[下一篇：REST风格操作](/notes/restful_api.md)

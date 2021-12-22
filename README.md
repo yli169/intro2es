@@ -7,3 +7,6 @@
    - [Elasticsearch简介](/notes/es_basics.md)
    - [安装和配置](/notes/install_es.md)
    - [Elasticsearch核心概念](/notes/es_concepts.md)
+   - [REST风格操作](/notes/restful_api.md)
+- 附录
+  - [Appendix A. 倒排索引](/notes/appendix_a.md)

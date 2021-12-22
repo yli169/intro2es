@@ -78,14 +78,16 @@ Elasticsearch-head是ES集群的web front-end，可以提供ES的可视化。使
 
 Elasticsearch默认使用stanford分词器，也能对中文分词，但效果并不好：
 
-```json
-// Input
+Request:
+```
 GET _analyze
 {
   "analyzer": "default",
   "text": "搜索引擎"
 }
-// Results
+```
+Response:
+```
 {
   "tokens" : [
     {
@@ -124,14 +126,16 @@ GET _analyze
 
 **ik_smart** 做最粗粒度的拆分，即最小词数：
 
-```json
-// input
+Request:
+```
 GET _analyze
 {
   "analyzer": "ik_smart",
   "text": "搜索引擎"
 }
-// results
+```
+Response:
+```
 {
   "tokens" : [
     {
@@ -147,14 +151,16 @@ GET _analyze
 
 **ik_max_word** 做最细粒度的拆分，即最大词数：
 
-```json
-// input
+Request:
+```
 GET _analyze
 {
   "analyzer": "ik_max_word",
   "text": "搜索引擎"
 }
-// results
+```
+Response:
+```
 {
   "tokens" : [
     {
