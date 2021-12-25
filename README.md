@@ -14,6 +14,6 @@
     - [删除 Deleting Data](/notes/delete_data.md)
   - [搜索 Searching Data](/notes/search_data.md)
   - [分析 Analyzing Data](/notes/analyze_data.md)
-- 相关性计算
+- [搜索相关性](search_relevancy.md)
 - 附录
   - [Appendix A. 倒排索引](/notes/appendix_a.md)

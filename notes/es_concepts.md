@@ -74,7 +74,7 @@ Elasticsearch 是 `document-oriented`，数据的最小单位就是`文档 docum
 ### 分片 Shards
 一个`分片(Shard)`就是一个底层的 `Lucene Index`，即一个包含倒排索引的文件目录：
 - `term dictionary`：将 term 映射到包含这个 term 的 documents。搜索时，Elasticsearch 不需要扫描所有文件，只需要利用 dictionary 即可；
-- `term frequencies`：Elasticsearch 可以快速获取 term 在一个文档中出现的频率，从而计算相关性。默认的排序算法是 `TF-IDF`；
+- `term frequencies`：Elasticsearch 可以快速获取 term 在一个文档中出现的频率，从而计算相关性。默认的排序算法是 `TFIDFSimilarity`；
 
 ![lucene_index](/figures/lucene_index.png)
 
