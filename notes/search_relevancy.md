@@ -196,31 +196,55 @@ GET /_search
 
 ## 修改 Scoring
 
-使用 [function_score](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html) 对 document 的 score 进行修改。
+- 使用 [function_score](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html) 对 document 的 score 进行修改。
 
-```
-GET /_search
-{
-  "query": {
-    "function_score": {
-      "query": { "match_all": {} },
-      "boost": "5", 
-      "functions": [
-        {
-          "filter": { "match": { "test": "bar" } },
-          "random_score": {}, 
-          "weight": 23
-        },
-        {
-          "filter": { "match": { "test": "cat" } },
-          "weight": 42
+    ```
+    GET /_search
+    {
+        "query": {
+            "function_score": {
+            "query": { "match_all": {} },
+            "boost": "5", 
+            "functions": [
+                {
+                "filter": { "match": { "test": "bar" } },
+                "random_score": {}, 
+                "weight": 23
+                },
+                {
+                "filter": { "match": { "test": "cat" } },
+                "weight": 42
+                }
+            ],
+            "max_boost": 42,
+            "score_mode": "max",
+            "boost_mode": "multiply",
+            "min_score": 42
+            }
         }
-      ],
-      "max_boost": 42,
-      "score_mode": "max",
-      "boost_mode": "multiply",
-      "min_score": 42
     }
-  }
-}
-```
+    ```
+
+- 使用 `script_score` 的 [script](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting.html) 提供 custom scoring：
+    ```
+    GET /_search
+    {
+        "query": {
+            "script_score": {
+                "query": {
+                    "match": { 
+                        "message": "elasticsearch" 
+                    }
+                },
+                "script": {
+                    "source": "sigmoid(doc['my-int'].value/10)"
+                }
+            }
+        }
+    }
+    ```
+    scripting APIs 非常 flexible，你可以选择 built-in 的 methods 也可以自己写：
+    - [Painless](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-painless.html) scripting language；
+    - Lucene [expressions](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-expression.html) language；
+    - Search [templates](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-template.html)；
+    - Advanced [JAVA](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-engine.html) scripts using script engines；
