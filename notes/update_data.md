@@ -51,4 +51,4 @@ Elasticsearch 支持 `concurrency control`，每次文档的创建和更新都�
 
 可以设定 `retry_on_conflict` 让 Elasticsearch 在 conflict 后自动尝试再次更新；
 
-[下一篇：删除 Deleting Data](/notes/delete_data.md)
+[下一篇：搜索相关性](/notes/search_relevancy.md)

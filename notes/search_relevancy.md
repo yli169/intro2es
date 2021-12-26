@@ -1,6 +1,6 @@
 # 搜索相关性
 
-[上一篇：搜索 Searching Data](/notes/search_data.md)
+[上一篇：分析 Analyzing Data](/notes/analyze_data.md)
 
 当我们进行搜索时，每一篇匹配出的文档都会有一个对应的 `_score`，来衡量 document 和 query 的相关性。默认情况下，返回的文档会根据分数来排序。默认分数计算为 `TFIDFSimilarity`。
 
